@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		418DFBD4162CAB6B00D4698E /* DesktopPresenter.icns in Resources */ = {isa = PBXBuildFile; fileRef = 418DFBD3162CAB6B00D4698E /* DesktopPresenter.icns */; };
+		418DFBD7162CAB7100D4698E /* DesktopPresenter.icns in Resources */ = {isa = PBXBuildFile; fileRef = 418DFBD6162CAB7100D4698E /* DesktopPresenter.icns */; };
 		41AF23FA162C2A5C00C7F25B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41AF23F9162C2A5C00C7F25B /* Cocoa.framework */; };
 		41AF2404162C2A5C00C7F25B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41AF2402162C2A5C00C7F25B /* InfoPlist.strings */; };
 		41AF2406162C2A5C00C7F25B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 41AF2405162C2A5C00C7F25B /* main.m */; };
@@ -27,6 +29,10 @@
 		41AF243F162C2A5D00C7F25B /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 41AF243E162C2A5D00C7F25B /* main.c */; };
 		41AF2441162C2A5D00C7F25B /* GetMetadataForFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 41AF2440162C2A5D00C7F25B /* GetMetadataForFile.m */; };
 		41AF2444162C2A5D00C7F25B /* MySpotlightImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 41AF2443162C2A5D00C7F25B /* MySpotlightImporter.m */; };
+		41AF2454162C2AFA00C7F25B /* Wirecast.icns in Resources */ = {isa = PBXBuildFile; fileRef = 41AF2453162C2AFA00C7F25B /* Wirecast.icns */; };
+		41AF245F162C314A00C7F25B /* TraceLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 41AF245E162C314A00C7F25B /* TraceLog.m */; };
+		41AF2462162C3F5F00C7F25B /* StatusLightGrayOff.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 41AF2460162C3F5F00C7F25B /* StatusLightGrayOff.tiff */; };
+		41AF2463162C3F5F00C7F25B /* StatusLightGreenOn.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 41AF2461162C3F5F00C7F25B /* StatusLightGreenOn.tiff */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,39 +53,46 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		418DFBD3162CAB6B00D4698E /* DesktopPresenter.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = DesktopPresenter.icns; sourceTree = "<group>"; };
+		418DFBD6162CAB7100D4698E /* DesktopPresenter.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = DesktopPresenter.icns; sourceTree = "<group>"; };
 		41AF23F5162C2A5C00C7F25B /* Wirecast Monitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wirecast Monitor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41AF23F9162C2A5C00C7F25B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		41AF23FC162C2A5C00C7F25B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		41AF23FD162C2A5C00C7F25B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		41AF23FE162C2A5C00C7F25B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		41AF2401162C2A5C00C7F25B /* Wirecast Monitor-Info.plist */ = {isa = PBXFileReference; path = "Wirecast Monitor-Info.plist"; sourceTree = "<group>"; };
+		41AF2401162C2A5C00C7F25B /* Wirecast Monitor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Wirecast Monitor-Info.plist"; sourceTree = "<group>"; };
 		41AF2403162C2A5C00C7F25B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		41AF2405162C2A5C00C7F25B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		41AF2407162C2A5C00C7F25B /* Wirecast Monitor-Prefix.pch */ = {isa = PBXFileReference; path = "Wirecast Monitor-Prefix.pch"; sourceTree = "<group>"; };
+		41AF2407162C2A5C00C7F25B /* Wirecast Monitor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Wirecast Monitor-Prefix.pch"; sourceTree = "<group>"; };
 		41AF2409162C2A5C00C7F25B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		41AF240B162C2A5C00C7F25B /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		41AF240B162C2A5C00C7F25B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		41AF240C162C2A5C00C7F25B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		41AF240F162C2A5C00C7F25B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		41AF2412162C2A5C00C7F25B /* Wirecast_Monitor.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Wirecast_Monitor.xcdatamodel; sourceTree = "<group>"; };
 		41AF2419162C2A5D00C7F25B /* Wirecast MonitorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Wirecast MonitorTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41AF241A162C2A5D00C7F25B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		41AF2421162C2A5D00C7F25B /* Wirecast MonitorTests-Info.plist */ = {isa = PBXFileReference; path = "Wirecast MonitorTests-Info.plist"; sourceTree = "<group>"; };
+		41AF2421162C2A5D00C7F25B /* Wirecast MonitorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Wirecast MonitorTests-Info.plist"; sourceTree = "<group>"; };
 		41AF2423162C2A5D00C7F25B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		41AF2425162C2A5D00C7F25B /* Wirecast_MonitorTests.h */ = {isa = PBXFileReference; path = Wirecast_MonitorTests.h; sourceTree = "<group>"; };
+		41AF2425162C2A5D00C7F25B /* Wirecast_MonitorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Wirecast_MonitorTests.h; sourceTree = "<group>"; };
 		41AF2426162C2A5D00C7F25B /* Wirecast_MonitorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Wirecast_MonitorTests.m; sourceTree = "<group>"; };
 		41AF242C162C2A5D00C7F25B /* Wirecast MonitorImporter.mdimporter */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Wirecast MonitorImporter.mdimporter"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41AF2430162C2A5D00C7F25B /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		41AF2432162C2A5D00C7F25B /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		41AF2434162C2A5D00C7F25B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		41AF2436162C2A5D00C7F25B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		41AF243A162C2A5D00C7F25B /* Wirecast MonitorImporter-Info.plist */ = {isa = PBXFileReference; path = "Wirecast MonitorImporter-Info.plist"; sourceTree = "<group>"; };
+		41AF243A162C2A5D00C7F25B /* Wirecast MonitorImporter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Wirecast MonitorImporter-Info.plist"; sourceTree = "<group>"; };
 		41AF243C162C2A5D00C7F25B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		41AF243E162C2A5D00C7F25B /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		41AF2440162C2A5D00C7F25B /* GetMetadataForFile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetMetadataForFile.m; sourceTree = "<group>"; };
-		41AF2442162C2A5D00C7F25B /* MySpotlightImporter.h */ = {isa = PBXFileReference; path = MySpotlightImporter.h; sourceTree = "<group>"; };
+		41AF2442162C2A5D00C7F25B /* MySpotlightImporter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MySpotlightImporter.h; sourceTree = "<group>"; };
 		41AF2443162C2A5D00C7F25B /* MySpotlightImporter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MySpotlightImporter.m; sourceTree = "<group>"; };
-		41AF2445162C2A5D00C7F25B /* Importer Read Me.txt */ = {isa = PBXFileReference; path = "Importer Read Me.txt"; sourceTree = "<group>"; };
-		41AF2446162C2A5D00C7F25B /* Wirecast MonitorImporter-Prefix.pch */ = {isa = PBXFileReference; path = "Wirecast MonitorImporter-Prefix.pch"; sourceTree = "<group>"; };
+		41AF2445162C2A5D00C7F25B /* Importer Read Me.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Importer Read Me.txt"; sourceTree = "<group>"; };
+		41AF2446162C2A5D00C7F25B /* Wirecast MonitorImporter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Wirecast MonitorImporter-Prefix.pch"; sourceTree = "<group>"; };
+		41AF2453162C2AFA00C7F25B /* Wirecast.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Wirecast.icns; sourceTree = "<group>"; };
+		41AF245D162C314A00C7F25B /* TraceLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TraceLog.h; sourceTree = "<group>"; };
+		41AF245E162C314A00C7F25B /* TraceLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TraceLog.m; sourceTree = "<group>"; };
+		41AF2460162C3F5F00C7F25B /* StatusLightGrayOff.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = StatusLightGrayOff.tiff; sourceTree = "<group>"; };
+		41AF2461162C3F5F00C7F25B /* StatusLightGreenOn.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = StatusLightGreenOn.tiff; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,11 +130,13 @@
 		41AF23EA162C2A5B00C7F25B = {
 			isa = PBXGroup;
 			children = (
+				418DFBD6162CAB7100D4698E /* DesktopPresenter.icns */,
 				41AF23FF162C2A5C00C7F25B /* Wirecast Monitor */,
 				41AF241F162C2A5D00C7F25B /* Wirecast MonitorTests */,
 				41AF2438162C2A5D00C7F25B /* Wirecast MonitorImporter */,
 				41AF23F8162C2A5C00C7F25B /* Frameworks */,
 				41AF23F6162C2A5C00C7F25B /* Products */,
+				41AF2452162C2AEE00C7F25B /* images */,
 			);
 			sourceTree = "<group>";
 		};
@@ -174,6 +189,8 @@
 		41AF2400162C2A5C00C7F25B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				41AF245D162C314A00C7F25B /* TraceLog.h */,
+				41AF245E162C314A00C7F25B /* TraceLog.m */,
 				41AF2401162C2A5C00C7F25B /* Wirecast Monitor-Info.plist */,
 				41AF2402162C2A5C00C7F25B /* InfoPlist.strings */,
 				41AF2405162C2A5C00C7F25B /* main.m */,
@@ -223,6 +240,18 @@
 				41AF2446162C2A5D00C7F25B /* Wirecast MonitorImporter-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		41AF2452162C2AEE00C7F25B /* images */ = {
+			isa = PBXGroup;
+			children = (
+				418DFBD3162CAB6B00D4698E /* DesktopPresenter.icns */,
+				41AF2460162C3F5F00C7F25B /* StatusLightGrayOff.tiff */,
+				41AF2461162C3F5F00C7F25B /* StatusLightGreenOn.tiff */,
+				41AF2453162C2AFA00C7F25B /* Wirecast.icns */,
+			);
+			name = images;
+			path = "Wirecast Monitor/images";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,6 +347,11 @@
 				41AF240A162C2A5C00C7F25B /* Credits.rtf in Resources */,
 				41AF2410162C2A5C00C7F25B /* MainMenu.xib in Resources */,
 				41AF242F162C2A5D00C7F25B /* Wirecast MonitorImporter.mdimporter in Resources */,
+				41AF2454162C2AFA00C7F25B /* Wirecast.icns in Resources */,
+				41AF2462162C3F5F00C7F25B /* StatusLightGrayOff.tiff in Resources */,
+				41AF2463162C3F5F00C7F25B /* StatusLightGreenOn.tiff in Resources */,
+				418DFBD4162CAB6B00D4698E /* DesktopPresenter.icns in Resources */,
+				418DFBD7162CAB7100D4698E /* DesktopPresenter.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +397,7 @@
 				41AF2406162C2A5C00C7F25B /* main.m in Sources */,
 				41AF240D162C2A5C00C7F25B /* AppDelegate.m in Sources */,
 				41AF2413162C2A5C00C7F25B /* Wirecast_Monitor.xcdatamodeld in Sources */,
+				41AF245F162C314A00C7F25B /* TraceLog.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,6 +624,7 @@
 				41AF244B162C2A5D00C7F25B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		41AF244C162C2A5D00C7F25B /* Build configuration list for PBXNativeTarget "Wirecast Monitor" */ = {
 			isa = XCConfigurationList;
@@ -597,6 +633,7 @@
 				41AF244E162C2A5D00C7F25B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		41AF244F162C2A5D00C7F25B /* Build configuration list for PBXNativeTarget "Wirecast MonitorTests" */ = {
 			isa = XCConfigurationList;
@@ -605,6 +642,7 @@
 				41AF2451162C2A5D00C7F25B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

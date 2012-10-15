@@ -3,22 +3,187 @@
 //  Wirecast Monitor
 //
 //  Created by hoeiriis on 10/15/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 LearningLab DTU. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "TraceLog.h"
 
 @implementation AppDelegate
 
-@synthesize window = _window;
-@synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
-@synthesize managedObjectModel = __managedObjectModel;
-@synthesize managedObjectContext = __managedObjectContext;
+@synthesize fieldVersion                = _fieldVersion;
+@synthesize window                      = _window;
+@synthesize labelStatics                = _labelStatics;
+@synthesize labelStatus                 = _labelStatus;
+@synthesize LED00                       = _LED00;
+@synthesize LED01                       = _LED01;
+@synthesize LED02                       = _LED02;
+@synthesize persistentStoreCoordinator  = __persistentStoreCoordinator;
+@synthesize managedObjectModel          = __managedObjectModel;
+@synthesize managedObjectContext        = __managedObjectContext;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
+    [_window setTitle:[NSString stringWithFormat:@"Wirecast Monitor %@ (%@)",[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"],[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]]];
+    wcStatus    = NO;
+    wcNetwork   = NO;
+    wcDisk      = NO;
+    wcNetworkC  = 0;
+    [_fieldVersion  setStringValue:[NSString stringWithFormat:@"Monitoring Wirecast %@",[TraceLog strVersion]]];
+    [_labelStatics  setStringValue:@"Status :\nNetwork Activity :\n Disk Activity :\n\nRefresh Rate :"];
+    [self updateStrings];
+    [self initRefresh];
 }
+
+- (void)initRefresh{
+    refreshTimer = [NSTimer scheduledTimerWithTimeInterval:2.0
+                                                    target:self
+                                                  selector:@selector(refreshFired:)
+                                                  userInfo:nil
+                                                   repeats:YES];
+}
+
+- (void)refreshFired:(NSTimer *)timer {
+    [self updateLEDs];
+    [self updateStrings];
+    [self updateNetwork];
+    [self updateDisk];
+}
+
+- (BOOL)updateDisk{
+    BOOL suc = NO;
+    if ([TraceLog boolRunning]) {
+        NSTask          *task               = [NSTask new];
+        [task           setLaunchPath:@"/usr/sbin/lsof"];
+        [task           setArguments:[NSArray arrayWithObjects:@"-p",PID, nil]];
+        NSPipe          *outputPipe         = [NSPipe pipe];
+        [task           setStandardInput:[NSPipe pipe]];
+        [task           setStandardOutput:outputPipe];
+        [task           launch];
+        NSData          *outputData         = [[outputPipe fileHandleForReading] readDataToEndOfFile];
+        NSString        *outputString       = [[NSString alloc] initWithData:outputData encoding:NSUTF8StringEncoding];
+        NSArray         *arrCon             = [outputString componentsSeparatedByString:@"\n"];
+        NSEnumerator    *enumerator         = [arrCon objectEnumerator];
+        id value;
+        while ((value = [enumerator nextObject])) {
+            NSRange         range               = [value rangeOfString:PID options:NSCaseInsensitiveSearch];
+            if(range.location != NSNotFound) {
+                NSRange         rangeF4V               = [value rangeOfString:@".f4v" options:NSCaseInsensitiveSearch];
+                NSRange         rangeMOV               = [value rangeOfString:@".mov" options:NSCaseInsensitiveSearch];
+                NSRange         rangeM4V               = [value rangeOfString:@".m4v" options:NSCaseInsensitiveSearch];
+                NSRange         rangeWC                = [value rangeOfString:@"Wirecast.app" options:NSCaseInsensitiveSearch];
+                if(rangeF4V.location != NSNotFound && rangeWC.location == NSNotFound) {
+                    suc = YES;
+                }else if(rangeMOV.location != NSNotFound && rangeWC.location == NSNotFound) {
+                    suc = YES;
+                }else if(rangeM4V.location != NSNotFound && rangeWC.location == NSNotFound) {
+                    suc = YES;
+                }
+            }
+        }
+    }
+    return suc;
+}
+
+- (BOOL)updateNetwork{
+    BOOL suc = NO;
+    if ([TraceLog boolRunning]) {
+        NSTask          *task               = [NSTask new];
+        [task           setLaunchPath:@"/bin/ps"];
+        [task           setArguments:[NSArray arrayWithObjects:@"axc", nil]];
+        NSPipe          *outputPipe         = [NSPipe pipe];
+        [task           setStandardInput:[NSPipe pipe]];
+        [task           setStandardOutput:outputPipe];
+        [task           launch];
+        [task           waitUntilExit];
+        NSData          *outputData         = [[outputPipe fileHandleForReading] readDataToEndOfFile];
+        NSString        *outputString       = [[NSString alloc] initWithData:outputData encoding:NSUTF8StringEncoding];
+        NSArray *arrPid = [outputString componentsSeparatedByString:@"\n"];
+        NSEnumerator    *enumerator = [arrPid objectEnumerator];
+        id value;
+        NSString *name, *pid = [[NSString alloc] init];
+        while ((value = [enumerator nextObject])) {
+            name = [value substringWithRange:NSMakeRange([value length]-8, 8)];
+            if ([name isEqualToString:@"Wirecast"]) {
+                pid = [value substringWithRange:NSMakeRange(0, 5)];
+                PID = pid;
+            }
+        }
+        NSTask          *task2               = [NSTask new];
+        [task2           setLaunchPath:@"/usr/sbin/lsof"];
+        [task2           setArguments:[NSArray arrayWithObjects:@"-i", nil]];
+        NSPipe          *outputPipe2         = [NSPipe pipe];
+        [task2           setStandardInput:[NSPipe pipe]];
+        [task2           setStandardOutput:outputPipe2];
+        [task2           launch];
+        [task2           waitUntilExit];
+        NSData          *outputData2         = [[outputPipe2 fileHandleForReading] readDataToEndOfFile];
+        NSString        *outputString2       = [[NSString alloc] initWithData:outputData2 encoding:NSUTF8StringEncoding];
+        NSArray *arrCon = [outputString2 componentsSeparatedByString:@"\n"];
+        NSEnumerator    *enumerator2 = [arrCon objectEnumerator];
+        id value2;
+        while ((value2 = [enumerator2 nextObject])) {
+            NSRange         range2               = [value2 rangeOfString:pid options:NSCaseInsensitiveSearch];
+            if(range2.location != NSNotFound) {
+                NSRange         range2               = [value2 rangeOfString:@"ESTABLISHED" options:NSCaseInsensitiveSearch];
+                if(range2.location != NSNotFound) {
+                    suc = YES;
+                }else {
+                    suc = NO;
+                }
+            }
+        }
+    }
+    
+    return suc;
+}
+
+
+
+- (void)updateLEDs{
+    if ([TraceLog boolRunning]) {
+        [_LED00 setImage:[[NSImage alloc]initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"StatusLightGreenOn" ofType:@"tiff"]]];
+        wcStatus = YES;
+        if ([self updateNetwork]) {
+            wcNetworkC = wcNetworkC+1;
+            if (wcNetworkC>2) {
+                [_LED01 setImage:[[NSImage alloc]initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"StatusLightGreenOn" ofType:@"tiff"]]];
+                wcNetwork = YES;
+            }
+        }else {
+            [_LED01 setImage:[[NSImage alloc]initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"StatusLightGrayOff" ofType:@"tiff"]]];
+            wcNetwork   = NO;
+            wcNetworkC  = 0;
+        }
+        if ([self updateDisk]) {
+            [_LED02 setImage:[[NSImage alloc]initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"StatusLightGreenOn" ofType:@"tiff"]]];
+            wcDisk = YES;
+        }else {
+            [_LED02 setImage:[[NSImage alloc]initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"StatusLightGrayOff" ofType:@"tiff"]]];
+            wcDisk = NO;
+        }
+    }else {
+        [_LED00 setImage:[[NSImage alloc]initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"StatusLightGrayOff" ofType:@"tiff"]]];
+        wcStatus = NO;
+    }
+}
+
+- (void)updateStrings{
+    NSString *str00 = @"not running";
+    NSString *str01 = @"not streaming";
+    NSString *str02 = @"not recording";
+    if (wcStatus) {
+        str00 = @"running";
+    }
+    if (wcNetwork) {
+        str01 = @"streaming";
+    }
+    if (wcDisk) {
+        str02 = @"recording";
+    }
+    [_labelStatus   setStringValue:[NSString stringWithFormat:@"%@\n%@\n%@",str00,str01,str02]];
+}
+
 
 // Returns the directory the application uses to store the Core Data store file. This code uses a directory named "LearningLab-DTU.Wirecast_Monitor" in the user's Application Support directory.
 - (NSURL *)applicationFilesDirectory

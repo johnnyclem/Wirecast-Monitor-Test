@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Wirecast Monitor' target in the 'Wirecast Monitor' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

@@ -1,0 +1,625 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		41AF23FA162C2A5C00C7F25B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41AF23F9162C2A5C00C7F25B /* Cocoa.framework */; };
+		41AF2404162C2A5C00C7F25B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41AF2402162C2A5C00C7F25B /* InfoPlist.strings */; };
+		41AF2406162C2A5C00C7F25B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 41AF2405162C2A5C00C7F25B /* main.m */; };
+		41AF240A162C2A5C00C7F25B /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 41AF2408162C2A5C00C7F25B /* Credits.rtf */; };
+		41AF240D162C2A5C00C7F25B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 41AF240C162C2A5C00C7F25B /* AppDelegate.m */; };
+		41AF2410162C2A5C00C7F25B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41AF240E162C2A5C00C7F25B /* MainMenu.xib */; };
+		41AF2413162C2A5C00C7F25B /* Wirecast_Monitor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41AF2411162C2A5C00C7F25B /* Wirecast_Monitor.xcdatamodeld */; };
+		41AF241B162C2A5D00C7F25B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41AF241A162C2A5D00C7F25B /* SenTestingKit.framework */; };
+		41AF241C162C2A5D00C7F25B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41AF23F9162C2A5C00C7F25B /* Cocoa.framework */; };
+		41AF2424162C2A5D00C7F25B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41AF2422162C2A5D00C7F25B /* InfoPlist.strings */; };
+		41AF2427162C2A5D00C7F25B /* Wirecast_MonitorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 41AF2426162C2A5D00C7F25B /* Wirecast_MonitorTests.m */; };
+		41AF242F162C2A5D00C7F25B /* Wirecast MonitorImporter.mdimporter in Resources */ = {isa = PBXBuildFile; fileRef = 41AF242C162C2A5D00C7F25B /* Wirecast MonitorImporter.mdimporter */; };
+		41AF2431162C2A5D00C7F25B /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41AF2430162C2A5D00C7F25B /* CoreServices.framework */; };
+		41AF2433162C2A5D00C7F25B /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41AF2432162C2A5D00C7F25B /* CoreFoundation.framework */; };
+		41AF2435162C2A5D00C7F25B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41AF2434162C2A5D00C7F25B /* CoreData.framework */; };
+		41AF2437162C2A5D00C7F25B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41AF2436162C2A5D00C7F25B /* Foundation.framework */; };
+		41AF243D162C2A5D00C7F25B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41AF243B162C2A5D00C7F25B /* InfoPlist.strings */; };
+		41AF243F162C2A5D00C7F25B /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 41AF243E162C2A5D00C7F25B /* main.c */; };
+		41AF2441162C2A5D00C7F25B /* GetMetadataForFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 41AF2440162C2A5D00C7F25B /* GetMetadataForFile.m */; };
+		41AF2444162C2A5D00C7F25B /* MySpotlightImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 41AF2443162C2A5D00C7F25B /* MySpotlightImporter.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		41AF241D162C2A5D00C7F25B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41AF23EC162C2A5B00C7F25B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 41AF23F4162C2A5C00C7F25B;
+			remoteInfo = "Wirecast Monitor";
+		};
+		41AF242D162C2A5D00C7F25B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41AF23EC162C2A5B00C7F25B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 41AF242B162C2A5D00C7F25B;
+			remoteInfo = "Wirecast MonitorImporter";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		41AF23F5162C2A5C00C7F25B /* Wirecast Monitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wirecast Monitor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		41AF23F9162C2A5C00C7F25B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		41AF23FC162C2A5C00C7F25B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		41AF23FD162C2A5C00C7F25B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		41AF23FE162C2A5C00C7F25B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		41AF2401162C2A5C00C7F25B /* Wirecast Monitor-Info.plist */ = {isa = PBXFileReference; path = "Wirecast Monitor-Info.plist"; sourceTree = "<group>"; };
+		41AF2403162C2A5C00C7F25B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		41AF2405162C2A5C00C7F25B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		41AF2407162C2A5C00C7F25B /* Wirecast Monitor-Prefix.pch */ = {isa = PBXFileReference; path = "Wirecast Monitor-Prefix.pch"; sourceTree = "<group>"; };
+		41AF2409162C2A5C00C7F25B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		41AF240B162C2A5C00C7F25B /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		41AF240C162C2A5C00C7F25B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		41AF240F162C2A5C00C7F25B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		41AF2412162C2A5C00C7F25B /* Wirecast_Monitor.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Wirecast_Monitor.xcdatamodel; sourceTree = "<group>"; };
+		41AF2419162C2A5D00C7F25B /* Wirecast MonitorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Wirecast MonitorTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		41AF241A162C2A5D00C7F25B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		41AF2421162C2A5D00C7F25B /* Wirecast MonitorTests-Info.plist */ = {isa = PBXFileReference; path = "Wirecast MonitorTests-Info.plist"; sourceTree = "<group>"; };
+		41AF2423162C2A5D00C7F25B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		41AF2425162C2A5D00C7F25B /* Wirecast_MonitorTests.h */ = {isa = PBXFileReference; path = Wirecast_MonitorTests.h; sourceTree = "<group>"; };
+		41AF2426162C2A5D00C7F25B /* Wirecast_MonitorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Wirecast_MonitorTests.m; sourceTree = "<group>"; };
+		41AF242C162C2A5D00C7F25B /* Wirecast MonitorImporter.mdimporter */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Wirecast MonitorImporter.mdimporter"; sourceTree = BUILT_PRODUCTS_DIR; };
+		41AF2430162C2A5D00C7F25B /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		41AF2432162C2A5D00C7F25B /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		41AF2434162C2A5D00C7F25B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		41AF2436162C2A5D00C7F25B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		41AF243A162C2A5D00C7F25B /* Wirecast MonitorImporter-Info.plist */ = {isa = PBXFileReference; path = "Wirecast MonitorImporter-Info.plist"; sourceTree = "<group>"; };
+		41AF243C162C2A5D00C7F25B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		41AF243E162C2A5D00C7F25B /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		41AF2440162C2A5D00C7F25B /* GetMetadataForFile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetMetadataForFile.m; sourceTree = "<group>"; };
+		41AF2442162C2A5D00C7F25B /* MySpotlightImporter.h */ = {isa = PBXFileReference; path = MySpotlightImporter.h; sourceTree = "<group>"; };
+		41AF2443162C2A5D00C7F25B /* MySpotlightImporter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MySpotlightImporter.m; sourceTree = "<group>"; };
+		41AF2445162C2A5D00C7F25B /* Importer Read Me.txt */ = {isa = PBXFileReference; path = "Importer Read Me.txt"; sourceTree = "<group>"; };
+		41AF2446162C2A5D00C7F25B /* Wirecast MonitorImporter-Prefix.pch */ = {isa = PBXFileReference; path = "Wirecast MonitorImporter-Prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		41AF23F2162C2A5C00C7F25B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41AF23FA162C2A5C00C7F25B /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41AF2415162C2A5D00C7F25B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41AF241B162C2A5D00C7F25B /* SenTestingKit.framework in Frameworks */,
+				41AF241C162C2A5D00C7F25B /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41AF2429162C2A5D00C7F25B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41AF2431162C2A5D00C7F25B /* CoreServices.framework in Frameworks */,
+				41AF2433162C2A5D00C7F25B /* CoreFoundation.framework in Frameworks */,
+				41AF2435162C2A5D00C7F25B /* CoreData.framework in Frameworks */,
+				41AF2437162C2A5D00C7F25B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		41AF23EA162C2A5B00C7F25B = {
+			isa = PBXGroup;
+			children = (
+				41AF23FF162C2A5C00C7F25B /* Wirecast Monitor */,
+				41AF241F162C2A5D00C7F25B /* Wirecast MonitorTests */,
+				41AF2438162C2A5D00C7F25B /* Wirecast MonitorImporter */,
+				41AF23F8162C2A5C00C7F25B /* Frameworks */,
+				41AF23F6162C2A5C00C7F25B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		41AF23F6162C2A5C00C7F25B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				41AF23F5162C2A5C00C7F25B /* Wirecast Monitor.app */,
+				41AF2419162C2A5D00C7F25B /* Wirecast MonitorTests.octest */,
+				41AF242C162C2A5D00C7F25B /* Wirecast MonitorImporter.mdimporter */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		41AF23F8162C2A5C00C7F25B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				41AF23F9162C2A5C00C7F25B /* Cocoa.framework */,
+				41AF241A162C2A5D00C7F25B /* SenTestingKit.framework */,
+				41AF2430162C2A5D00C7F25B /* CoreServices.framework */,
+				41AF2432162C2A5D00C7F25B /* CoreFoundation.framework */,
+				41AF2434162C2A5D00C7F25B /* CoreData.framework */,
+				41AF2436162C2A5D00C7F25B /* Foundation.framework */,
+				41AF23FB162C2A5C00C7F25B /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		41AF23FB162C2A5C00C7F25B /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				41AF23FC162C2A5C00C7F25B /* AppKit.framework */,
+				41AF23FD162C2A5C00C7F25B /* CoreData.framework */,
+				41AF23FE162C2A5C00C7F25B /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		41AF23FF162C2A5C00C7F25B /* Wirecast Monitor */ = {
+			isa = PBXGroup;
+			children = (
+				41AF240B162C2A5C00C7F25B /* AppDelegate.h */,
+				41AF240C162C2A5C00C7F25B /* AppDelegate.m */,
+				41AF240E162C2A5C00C7F25B /* MainMenu.xib */,
+				41AF2411162C2A5C00C7F25B /* Wirecast_Monitor.xcdatamodeld */,
+				41AF2400162C2A5C00C7F25B /* Supporting Files */,
+			);
+			path = "Wirecast Monitor";
+			sourceTree = "<group>";
+		};
+		41AF2400162C2A5C00C7F25B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				41AF2401162C2A5C00C7F25B /* Wirecast Monitor-Info.plist */,
+				41AF2402162C2A5C00C7F25B /* InfoPlist.strings */,
+				41AF2405162C2A5C00C7F25B /* main.m */,
+				41AF2407162C2A5C00C7F25B /* Wirecast Monitor-Prefix.pch */,
+				41AF2408162C2A5C00C7F25B /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		41AF241F162C2A5D00C7F25B /* Wirecast MonitorTests */ = {
+			isa = PBXGroup;
+			children = (
+				41AF2425162C2A5D00C7F25B /* Wirecast_MonitorTests.h */,
+				41AF2426162C2A5D00C7F25B /* Wirecast_MonitorTests.m */,
+				41AF2420162C2A5D00C7F25B /* Supporting Files */,
+			);
+			path = "Wirecast MonitorTests";
+			sourceTree = "<group>";
+		};
+		41AF2420162C2A5D00C7F25B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				41AF2421162C2A5D00C7F25B /* Wirecast MonitorTests-Info.plist */,
+				41AF2422162C2A5D00C7F25B /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		41AF2438162C2A5D00C7F25B /* Wirecast MonitorImporter */ = {
+			isa = PBXGroup;
+			children = (
+				41AF2440162C2A5D00C7F25B /* GetMetadataForFile.m */,
+				41AF2442162C2A5D00C7F25B /* MySpotlightImporter.h */,
+				41AF2443162C2A5D00C7F25B /* MySpotlightImporter.m */,
+				41AF2445162C2A5D00C7F25B /* Importer Read Me.txt */,
+				41AF2439162C2A5D00C7F25B /* Supporting Files */,
+			);
+			path = "Wirecast MonitorImporter";
+			sourceTree = "<group>";
+		};
+		41AF2439162C2A5D00C7F25B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				41AF243A162C2A5D00C7F25B /* Wirecast MonitorImporter-Info.plist */,
+				41AF243B162C2A5D00C7F25B /* InfoPlist.strings */,
+				41AF243E162C2A5D00C7F25B /* main.c */,
+				41AF2446162C2A5D00C7F25B /* Wirecast MonitorImporter-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		41AF23F4162C2A5C00C7F25B /* Wirecast Monitor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41AF244C162C2A5D00C7F25B /* Build configuration list for PBXNativeTarget "Wirecast Monitor" */;
+			buildPhases = (
+				41AF23F1162C2A5C00C7F25B /* Sources */,
+				41AF23F2162C2A5C00C7F25B /* Frameworks */,
+				41AF23F3162C2A5C00C7F25B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				41AF242E162C2A5D00C7F25B /* PBXTargetDependency */,
+			);
+			name = "Wirecast Monitor";
+			productName = "Wirecast Monitor";
+			productReference = 41AF23F5162C2A5C00C7F25B /* Wirecast Monitor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		41AF2418162C2A5D00C7F25B /* Wirecast MonitorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41AF244F162C2A5D00C7F25B /* Build configuration list for PBXNativeTarget "Wirecast MonitorTests" */;
+			buildPhases = (
+				41AF2414162C2A5D00C7F25B /* Sources */,
+				41AF2415162C2A5D00C7F25B /* Frameworks */,
+				41AF2416162C2A5D00C7F25B /* Resources */,
+				41AF2417162C2A5D00C7F25B /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				41AF241E162C2A5D00C7F25B /* PBXTargetDependency */,
+			);
+			name = "Wirecast MonitorTests";
+			productName = "Wirecast MonitorTests";
+			productReference = 41AF2419162C2A5D00C7F25B /* Wirecast MonitorTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		41AF242B162C2A5D00C7F25B /* Wirecast MonitorImporter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41AF2449162C2A5D00C7F25B /* Build configuration list for PBXNativeTarget "Wirecast MonitorImporter" */;
+			buildPhases = (
+				41AF2428162C2A5D00C7F25B /* Sources */,
+				41AF2429162C2A5D00C7F25B /* Frameworks */,
+				41AF242A162C2A5D00C7F25B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Wirecast MonitorImporter";
+			productName = "Wirecast MonitorImporter";
+			productReference = 41AF242C162C2A5D00C7F25B /* Wirecast MonitorImporter.mdimporter */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		41AF23EC162C2A5B00C7F25B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 41AF23EF162C2A5B00C7F25B /* Build configuration list for PBXProject "Wirecast Monitor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 41AF23EA162C2A5B00C7F25B;
+			productRefGroup = 41AF23F6162C2A5C00C7F25B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				41AF23F4162C2A5C00C7F25B /* Wirecast Monitor */,
+				41AF2418162C2A5D00C7F25B /* Wirecast MonitorTests */,
+				41AF242B162C2A5D00C7F25B /* Wirecast MonitorImporter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		41AF23F3162C2A5C00C7F25B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41AF2404162C2A5C00C7F25B /* InfoPlist.strings in Resources */,
+				41AF240A162C2A5C00C7F25B /* Credits.rtf in Resources */,
+				41AF2410162C2A5C00C7F25B /* MainMenu.xib in Resources */,
+				41AF242F162C2A5D00C7F25B /* Wirecast MonitorImporter.mdimporter in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41AF2416162C2A5D00C7F25B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41AF2424162C2A5D00C7F25B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41AF242A162C2A5D00C7F25B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41AF243D162C2A5D00C7F25B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		41AF2417162C2A5D00C7F25B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		41AF23F1162C2A5C00C7F25B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41AF2406162C2A5C00C7F25B /* main.m in Sources */,
+				41AF240D162C2A5C00C7F25B /* AppDelegate.m in Sources */,
+				41AF2413162C2A5C00C7F25B /* Wirecast_Monitor.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41AF2414162C2A5D00C7F25B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41AF2427162C2A5D00C7F25B /* Wirecast_MonitorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41AF2428162C2A5D00C7F25B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41AF243F162C2A5D00C7F25B /* main.c in Sources */,
+				41AF2441162C2A5D00C7F25B /* GetMetadataForFile.m in Sources */,
+				41AF2444162C2A5D00C7F25B /* MySpotlightImporter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		41AF241E162C2A5D00C7F25B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 41AF23F4162C2A5C00C7F25B /* Wirecast Monitor */;
+			targetProxy = 41AF241D162C2A5D00C7F25B /* PBXContainerItemProxy */;
+		};
+		41AF242E162C2A5D00C7F25B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 41AF242B162C2A5D00C7F25B /* Wirecast MonitorImporter */;
+			targetProxy = 41AF242D162C2A5D00C7F25B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		41AF2402162C2A5C00C7F25B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				41AF2403162C2A5C00C7F25B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		41AF2408162C2A5C00C7F25B /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				41AF2409162C2A5C00C7F25B /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		41AF240E162C2A5C00C7F25B /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				41AF240F162C2A5C00C7F25B /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		41AF2422162C2A5D00C7F25B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				41AF2423162C2A5D00C7F25B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		41AF243B162C2A5D00C7F25B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				41AF243C162C2A5D00C7F25B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		41AF2447162C2A5D00C7F25B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		41AF2448162C2A5D00C7F25B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		41AF244A162C2A5D00C7F25B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Wirecast MonitorImporter/Wirecast MonitorImporter-Prefix.pch";
+				INFOPLIST_FILE = "Wirecast MonitorImporter/Wirecast MonitorImporter-Info.plist";
+				INSTALL_PATH = "@executable_path/../Contents/Library/Spotlight";
+				LIBRARY_STYLE = BUNDLE;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = mdimporter;
+			};
+			name = Debug;
+		};
+		41AF244B162C2A5D00C7F25B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Wirecast MonitorImporter/Wirecast MonitorImporter-Prefix.pch";
+				INFOPLIST_FILE = "Wirecast MonitorImporter/Wirecast MonitorImporter-Info.plist";
+				INSTALL_PATH = "@executable_path/../Contents/Library/Spotlight";
+				LIBRARY_STYLE = BUNDLE;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = mdimporter;
+			};
+			name = Release;
+		};
+		41AF244D162C2A5D00C7F25B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Wirecast Monitor/Wirecast Monitor-Prefix.pch";
+				INFOPLIST_FILE = "Wirecast Monitor/Wirecast Monitor-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		41AF244E162C2A5D00C7F25B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Wirecast Monitor/Wirecast Monitor-Prefix.pch";
+				INFOPLIST_FILE = "Wirecast Monitor/Wirecast Monitor-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		41AF2450162C2A5D00C7F25B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Wirecast Monitor.app/Contents/MacOS/Wirecast Monitor";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Wirecast Monitor/Wirecast Monitor-Prefix.pch";
+				INFOPLIST_FILE = "Wirecast MonitorTests/Wirecast MonitorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		41AF2451162C2A5D00C7F25B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Wirecast Monitor.app/Contents/MacOS/Wirecast Monitor";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Wirecast Monitor/Wirecast Monitor-Prefix.pch";
+				INFOPLIST_FILE = "Wirecast MonitorTests/Wirecast MonitorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		41AF23EF162C2A5B00C7F25B /* Build configuration list for PBXProject "Wirecast Monitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41AF2447162C2A5D00C7F25B /* Debug */,
+				41AF2448162C2A5D00C7F25B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		41AF2449162C2A5D00C7F25B /* Build configuration list for PBXNativeTarget "Wirecast MonitorImporter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41AF244A162C2A5D00C7F25B /* Debug */,
+				41AF244B162C2A5D00C7F25B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		41AF244C162C2A5D00C7F25B /* Build configuration list for PBXNativeTarget "Wirecast Monitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41AF244D162C2A5D00C7F25B /* Debug */,
+				41AF244E162C2A5D00C7F25B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		41AF244F162C2A5D00C7F25B /* Build configuration list for PBXNativeTarget "Wirecast MonitorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41AF2450162C2A5D00C7F25B /* Debug */,
+				41AF2451162C2A5D00C7F25B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		41AF2411162C2A5C00C7F25B /* Wirecast_Monitor.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				41AF2412162C2A5C00C7F25B /* Wirecast_Monitor.xcdatamodel */,
+			);
+			currentVersion = 41AF2412162C2A5C00C7F25B /* Wirecast_Monitor.xcdatamodel */;
+			path = Wirecast_Monitor.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 41AF23EC162C2A5B00C7F25B /* Project object */;
+}

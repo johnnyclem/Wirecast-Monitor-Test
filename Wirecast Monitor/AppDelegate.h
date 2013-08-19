@@ -8,27 +8,27 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>{
-    BOOL wcStatus, wcNetwork, wcDisk;
-    int  wcNetworkC;
-    NSTimer     *refreshTimer;
-    NSString    *PID;
+@interface AppDelegate : NSObject <NSApplicationDelegate>
+{
+    BOOL wcStatus;
+    BOOL wcNetwork;
+    BOOL wcDisk;
+    
+    int wcNetworkC;
+    NSTimer *refreshTimer;
 }
 
-@property (weak)    IBOutlet NSTextField    *fieldVersion;
-@property (assign)  IBOutlet NSWindow       *window;
-@property (weak)    IBOutlet NSTextField    *labelStatics;
-@property (weak)    IBOutlet NSTextField    *labelStatus;
+@property (nonatomic, assign) IBOutlet NSWindow *window;
 
-@property (weak) IBOutlet NSImageView *LED00;
-@property (weak) IBOutlet NSImageView *LED01;
-@property (weak) IBOutlet NSImageView *LED02;
+@property (nonatomic, weak) IBOutlet NSTextField *fieldVersion;
+@property (nonatomic, weak) IBOutlet NSTextField *labelStatics;
+@property (nonatomic, weak) IBOutlet NSTextField *labelStatus;
 
+@property (nonatomic, weak) IBOutlet NSImageView *LED00;
+@property (nonatomic, weak) IBOutlet NSImageView *LED01;
+@property (nonatomic, weak) IBOutlet NSImageView *LED02;
 
-@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator    *persistentStoreCoordinator;
-@property (readonly, strong, nonatomic) NSManagedObjectModel            *managedObjectModel;
-@property (readonly, strong, nonatomic) NSManagedObjectContext          *managedObjectContext;
+- (IBAction)refresh:(id)sender;
 
-- (IBAction)saveAction:(id)sender;
 
 @end
